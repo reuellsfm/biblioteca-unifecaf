@@ -2,7 +2,7 @@
 
 Site da Biblioteca Digital UniFECAF: livros, materiais acadêmicos e serviços de apoio aos estudantes.
 
-Para ver o site funcionando, acesse a versão publicada no GitHub Pages.
+Para ver o site funcionando, [acesse a versão publicada no GitHub Pages](https://reuellsfm.github.io/biblioteca-unifecaf/).
 
 ## Seções
 
