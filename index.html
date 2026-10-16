@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biblioteca Digital UniFECAF: livros, materiais acadêmicos e serviços de apoio aos estudantes.">
+  <title>Biblioteca Digital UniFECAF</title>
+
+  <link rel="icon" href="assets/imagens/favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes: Poppins (títulos) e Lora (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folha de estilos do site -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Atalho para quem navega pelo teclado ou leitor de tela -->
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho">
+    <div class="container cabecalho-interno">
+      <a class="marca" href="#inicio">
+        <img src="assets/imagens/favicon.svg" alt="" width="36" height="36">
+        <span>Biblioteca Digital <strong>UniFECAF</strong></span>
+      </a>
+
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="#inicio" aria-current="page">Biblioteca</a></li>
+          <li><a href="#livros">Livros</a></li>
+          <li><a href="#unidades">Unidades</a></li>
+          <li><a href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== HERO (imagem principal) ===================== -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="container">
+        <div class="hero-texto">
+          <h1 id="titulo-principal">Biblioteca Digital UniFECAF</h1>
+          <p>Livros, artigos e materiais de apoio do seu curso reunidos em um só lugar, disponíveis a qualquer hora.</p>
+          <a class="botao botao-claro" href="#livros">Ver livros em destaque</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE A BIBLIOTECA ===================== -->
+    <section class="secao sobre" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="container">
+        <h2 id="titulo-sobre">Sobre a nossa biblioteca</h2>
+
+        <div class="sobre-grade">
+          <p>A Biblioteca Digital UniFECAF foi criada para que o estudante encontre, em poucos cliques, os livros e materiais indicados pelos professores. O acervo reúne títulos de todos os cursos, organizados por categoria, e pode ser consultado no computador ou no celular.</p>
+
+          <img src="assets/imagens/sobre-leitura.png" alt="Tablet com um livro aberto ao lado de uma pilha de livros" width="600" height="400">
+
+          <p>Além da leitura on-line, a biblioteca oferece espaços de estudo, empréstimo de livros impressos e uma equipe que orienta trabalhos acadêmicos, da busca por fontes confiáveis à formatação nas normas ABNT.</p>
+        </div>
+
+        <!-- Serviços oferecidos (as 4 imagens menores do protótipo) -->
+        <ul class="servicos">
+          <li class="servico">
+            <img src="assets/imagens/servico-acervo.png" alt="Tablet exibindo capas de livros" width="400" height="260">
+            <h3>Acervo digital</h3>
+            <p>E-books, artigos e apostilas para ler no navegador, a qualquer hora.</p>
+          </li>
+          <li class="servico">
+            <img src="assets/imagens/servico-emprestimo.png" alt="Pilha de livros com etiqueta de empréstimo" width="400" height="260">
+            <h3>Empréstimo</h3>
+            <p>Retire livros impressos nas unidades e renove o prazo pelo site.</p>
+          </li>
+          <li class="servico">
+            <img src="assets/imagens/servico-salas.png" alt="Mesa de estudos com cadeiras e luminária" width="400" height="260">
+            <h3>Salas de estudo</h3>
+            <p>Mesas coletivas e cabines individuais para estudar com tranquilidade.</p>
+          </li>
+          <li class="servico">
+            <img src="assets/imagens/servico-pesquisa.png" alt="Lupa sobre uma folha de texto" width="400" height="260">
+            <h3>Apoio à pesquisa</h3>
+            <p>Ajuda para encontrar fontes e formatar trabalhos nas normas ABNT.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== FAIXA DE DESTAQUE (segunda imagem larga) ===================== -->
+    <div class="destaque">
+      <div class="container">
+        <p class="destaque-frase">Leia no celular, no computador ou na biblioteca: o acervo acompanha você.</p>
+      </div>
+    </div>
+
+    <!-- ===================== NOSSOS LIVROS ===================== -->
+    <section class="secao livros" id="livros" aria-labelledby="titulo-livros">
+      <div class="container">
+        <h2 id="titulo-livros">Nossos livros</h2>
+        <p class="secao-intro">Destaques do acervo neste semestre, separados por categoria.</p>
+
+        <div class="grade-livros">
+          <article class="card-livro">
+            <h3>Lógica de Programação</h3>
+            <img src="assets/imagens/capa-logica.png" alt="Capa do livro Lógica de Programação" width="320" height="440">
+            <p class="categoria">Tecnologia</p>
+            <p>Algoritmos e estruturas de decisão e repetição explicados passo a passo, com exercícios resolvidos.</p>
+            <a class="botao" href="#contatos" aria-label="Saiba mais sobre Lógica de Programação">Saiba mais</a>
+          </article>
+
+          <article class="card-livro">
+            <h3>Design de Interfaces</h3>
+            <img src="assets/imagens/capa-design.png" alt="Capa do livro Design de Interfaces" width="320" height="440">
+            <p class="categoria">Design</p>
+            <p>Princípios de layout, cor, tipografia e usabilidade para criar telas claras e acessíveis.</p>
+            <a class="botao" href="#contatos" aria-label="Saiba mais sobre Design de Interfaces">Saiba mais</a>
+          </article>
+
+          <article class="card-livro">
+            <h3>Gestão de Projetos</h3>
+            <img src="assets/imagens/capa-gestao.png" alt="Capa do livro Gestão de Projetos" width="320" height="440">
+            <p class="categoria">Gestão</p>
+            <p>Planejamento, cronograma e controle de riscos com exemplos do dia a dia das empresas.</p>
+            <a class="botao" href="#contatos" aria-label="Saiba mais sobre Gestão de Projetos">Saiba mais</a>
+          </article>
+
+          <article class="card-livro">
+            <h3>Marketing Digital</h3>
+            <img src="assets/imagens/capa-marketing.png" alt="Capa do livro Marketing Digital" width="320" height="440">
+            <p class="categoria">Negócios</p>
+            <p>Como atrair e manter clientes usando redes sociais, conteúdo e análise de dados.</p>
+            <a class="botao" href="#contatos" aria-label="Saiba mais sobre Marketing Digital">Saiba mais</a>
+          </article>
+
+          <article class="card-livro">
+            <h3>Psicologia da Educação</h3>
+            <img src="assets/imagens/capa-psicologia.png" alt="Capa do livro Psicologia da Educação" width="320" height="440">
+            <p class="categoria">Educação</p>
+            <p>Como as pessoas aprendem e o que isso muda na prática da sala de aula.</p>
+            <a class="botao" href="#contatos" aria-label="Saiba mais sobre Psicologia da Educação">Saiba mais</a>
+          </article>
+
+          <article class="card-livro">
+            <h3>Dom Casmurro</h3>
+            <img src="assets/imagens/capa-dom-casmurro.png" alt="Capa do livro Dom Casmurro, de Machado de Assis" width="320" height="440">
+            <p class="categoria">Literatura</p>
+            <p>O clássico de Machado de Assis: Bentinho, Capitu e uma dúvida que atravessa gerações.</p>
+            <a class="botao" href="#contatos" aria-label="Saiba mais sobre Dom Casmurro">Saiba mais</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AS UNIDADES ===================== -->
+    <section class="secao unidades" id="unidades" aria-labelledby="titulo-unidades">
+      <div class="container">
+        <h2 id="titulo-unidades">As unidades</h2>
+
+        <article class="unidade">
+          <img src="assets/imagens/unidade-central.png" alt="Ilustração da Biblioteca Central com estantes, mesa de leitura e cadeiras" width="800" height="500">
+          <div class="unidade-texto">
+            <h3>Unidade 1: Biblioteca Central</h3>
+            <p>Abriga o acervo impresso, o balcão de empréstimos e mesas para estudo em grupo. Computadores com acesso às bases de pesquisa ficam disponíveis durante todo o horário de atendimento.</p>
+          </div>
+        </article>
+
+        <article class="unidade">
+          <img src="assets/imagens/unidade-estudos.png" alt="Ilustração de cabines individuais de estudo com luminárias" width="800" height="500">
+          <div class="unidade-texto">
+            <h3>Unidade 2: Espaço de Estudos</h3>
+            <p>Ambiente silencioso com cabines individuais, luz de leitura e tomadas em todas as mesas. Ideal para revisar o conteúdo antes das provas.</p>
+          </div>
+        </article>
+
+        <article class="unidade">
+          <img src="assets/imagens/unidade-digital.png" alt="Ilustração de notebook e celular exibindo o acervo digital" width="800" height="500">
+          <div class="unidade-texto">
+            <h3>Unidade 3: Biblioteca Digital</h3>
+            <p>A unidade que cabe no bolso: e-books, artigos e materiais complementares disponíveis 24 horas por dia, em qualquer dispositivo com internet.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATOS ===================== -->
+    <section class="secao contatos" id="contatos" aria-labelledby="titulo-contatos">
+      <div class="container">
+        <h2 id="titulo-contatos">Contatos</h2>
+
+        <div class="contatos-grade">
+          <div class="contatos-texto">
+            <p>Quer reservar um livro, tirar dúvidas sobre o acesso ou pedir ajuda com um trabalho? Fale com a equipe da biblioteca pelos canais abaixo.</p>
+            <address>
+              <p><strong>E-mail:</strong> <a href="mailto:biblioteca@exemplo.edu.br">biblioteca@exemplo.edu.br</a></p>
+              <p><strong>Telefone:</strong> <a href="tel:+551100000000">(11) 0000-0000</a></p>
+              <p><strong>Atendimento:</strong> segunda a sexta, das 8h às 22h; sábado, das 8h às 14h.</p>
+            </address>
+          </div>
+
+          <img src="assets/imagens/contato-atendimento.png" alt="Ilustração de envelope, balão de conversa e relógio" width="600" height="400">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="container rodape-interno">
+      <p>© 2026 Biblioteca Digital UniFECAF. Projeto acadêmico da disciplina Design Web; dados de contato ilustrativos.</p>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
+  </footer>
+
+</body>
+</html>

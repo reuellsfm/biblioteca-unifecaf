@@ -1,0 +1,527 @@
+/* Biblioteca Digital UniFECAF */
+
+/* ---------- 1. Variáveis ---------- */
+:root {
+  --azul-escuro: #0A2B4E;
+  --azul: #0B5CAD;
+  --azul-claro: #E8F1FB;
+  --verde-escuro: #0E6B44;
+  --verde: #22A06B;
+  --verde-claro: #E3F4EC;
+  --texto: #1C2B3A;
+  --texto-suave: #45576A;
+  --cinza-claro: #E9EEF3;
+  --branco: #FFFFFF;
+
+  --fonte-titulo: "Poppins", "Segoe UI", Arial, sans-serif;
+  --fonte-texto: "Lora", Georgia, "Times New Roman", serif;
+
+  --largura-max: 1120px;
+  --espaco-secao: 4rem;
+  --raio: 8px;
+}
+
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--texto);
+  background-color: var(--branco);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+  color: var(--azul-escuro);
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 7vw, 3.4rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 4.5vw, 2.25rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--azul);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+
+.pular-conteudo {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background-color: var(--branco);
+  color: var(--azul-escuro);
+  font-family: var(--fonte-titulo);
+  border-radius: var(--raio);
+}
+
+.pular-conteudo:focus {
+  top: 1rem;
+}
+
+
+/* ---------- 3. Componentes reutilizáveis ---------- */
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.secao {
+  padding: var(--espaco-secao) 0;
+}
+
+.secao-intro {
+  max-width: 60ch;
+  color: var(--texto-suave);
+  margin-bottom: 2rem;
+}
+
+.botao {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.7rem 1.6rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--branco);
+  background-color: var(--azul);
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.botao:hover {
+  background-color: var(--azul-escuro);
+}
+
+.botao-claro {
+  color: var(--azul-escuro);
+  background-color: var(--branco);
+}
+
+.botao-claro:hover {
+  background-color: var(--verde-claro);
+}
+
+
+/* ---------- 4. Cabeçalho e menu ---------- */
+.cabecalho {
+  background-color: var(--azul-escuro);
+}
+
+.cabecalho-interno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.marca strong {
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 0.5rem 0.6rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--branco);
+  text-decoration: none;
+  border-radius: var(--raio);
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.menu a[aria-current="page"] {
+  color: var(--azul-escuro);
+  background-color: var(--branco);
+}
+
+
+/* ---------- 5. Hero ---------- */
+.hero {
+  padding: 5rem 0;
+  color: var(--branco);
+  background-color: var(--azul-escuro);
+
+  background-image:
+    linear-gradient(rgba(10, 43, 78, 0.88), rgba(10, 43, 78, 0.88)),
+    url("../assets/imagens/hero-estante.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  color: var(--branco);
+}
+
+.hero-texto {
+  max-width: 34rem;
+}
+
+.hero-texto p {
+  font-size: 1.15rem;
+  margin-bottom: 1.75rem;
+}
+
+
+/* ---------- 6. Sobre e serviços ---------- */
+.sobre-grade {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sobre-grade img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--raio);
+}
+
+.servicos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 3.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.servico img {
+  width: 100%;
+  border-radius: var(--raio);
+  margin-bottom: 1rem;
+}
+
+.servico h3 {
+  margin-bottom: 0.4rem;
+}
+
+.servico p {
+  font-size: 0.98rem;
+  color: var(--texto-suave);
+}
+
+
+/* ---------- 7. Faixa de destaque ---------- */
+.destaque {
+  padding: 4.5rem 0;
+  text-align: center;
+  color: var(--branco);
+  background-color: var(--verde-escuro);
+  background-image: url("../assets/imagens/banner-livros.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.destaque-frase {
+  max-width: 26ch;
+  margin: 0 auto;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.4rem, 4vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+/* ---------- 8. Nossos livros ---------- */
+.livros {
+  background-color: var(--azul-claro);
+}
+
+.grade-livros {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card-livro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  background-color: var(--branco);
+  border-top: 4px solid var(--azul);
+  border-radius: var(--raio);
+}
+
+.card-livro img {
+  width: 55%;
+  max-width: 190px;
+  aspect-ratio: 8 / 11;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+  border-radius: 2px 6px 6px 2px;
+  box-shadow: 0 12px 20px -10px rgba(10, 43, 78, 0.55);
+}
+
+.card-livro p {
+  font-size: 0.98rem;
+  color: var(--texto-suave);
+}
+
+.card-livro .categoria {
+  padding: 0.15rem 0.8rem;
+  font-family: var(--fonte-titulo);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--verde-escuro);
+  background-color: var(--verde-claro);
+  border-radius: 999px;
+}
+
+.card-livro .botao {
+  margin-top: auto;
+}
+
+
+/* ---------- 9. As unidades ---------- */
+.unidades {
+  color: #DCE7F3;
+  background-color: var(--azul-escuro);
+}
+
+.unidades h2,
+.unidades h3 {
+  color: var(--branco);
+}
+
+.unidade {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.unidade:last-child {
+  margin-bottom: 0;
+}
+
+.unidade img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--raio);
+}
+
+.unidade-texto p {
+  max-width: 60ch;
+}
+
+
+/* ---------- 10. Contatos ---------- */
+.contatos {
+  background-color: var(--cinza-claro);
+}
+
+.contatos-grade {
+  display: grid;
+  gap: 2rem;
+}
+
+.contatos-grade img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--raio);
+}
+
+address {
+  font-style: normal;
+}
+
+address p {
+  margin-bottom: 0.5rem;
+}
+
+address strong {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  color: var(--azul-escuro);
+}
+
+
+/* ---------- 11. Rodapé ---------- */
+.rodape {
+  padding: 2rem 0;
+  font-family: var(--fonte-titulo);
+  font-size: 0.9rem;
+  color: #C6D4E3;
+  background-color: #061A30;
+}
+
+.rodape-interno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+.rodape a {
+  color: var(--branco);
+}
+
+
+/* ---------- 12. Responsividade ---------- */
+
+/* Tablet */
+@media (min-width: 600px) {
+  .servicos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grade-livros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  :root {
+    --espaco-secao: 5.5rem;
+  }
+
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  .cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .cabecalho-interno {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu a {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 8rem 0;
+    background-image:
+      linear-gradient(90deg, rgba(10, 43, 78, 0.97) 0%, rgba(10, 43, 78, 0.9) 45%, rgba(10, 43, 78, 0.25) 100%),
+      url("../assets/imagens/hero-estante.png");
+  }
+
+  .sobre-grade {
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .servicos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grade-livros {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .unidade {
+    grid-template-columns: 5fr 6fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .contatos-grade {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .rodape-interno {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .botao {
+    transition: none;
+  }
+}
